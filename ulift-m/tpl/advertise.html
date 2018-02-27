@@ -1,0 +1,10 @@
+<div class="advertise_box">
+    <p ng-click="jump('index')">跳过({{secondNumber}})</p>
+    <!--使用ng的slide-box设置轮播-->
+    <ion-slide-box  auto-play="true" does-continue="true" slide-interval="3000"
+                    show-pager="true">
+        <ion-slide class="item" ng-repeat="img in imgArray">
+            <img ng-src="{{img}}" alt=""/>
+        </ion-slide>
+    </ion-slide-box>
+</div>

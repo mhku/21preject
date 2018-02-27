@@ -1,0 +1,38 @@
+<ion-content class="has-footer content course_type_box">
+
+    <ion-side-menus  enable-menu-with-back-views="true">
+        <ion-side-menu-content drag-content="true">
+            <ion-header-bar class="bar-stable list_menu_icon"  id="iweb_header">
+                <a menu-toggle="left" class="button icon ion-navicon"></a>
+                <h1 class="title">课程分类</h1>
+            </ion-header-bar>
+            <ion-content>
+                <div class="list new_course_list">
+                    <a class="item item-thumbnail-left"  ng-repeat="course in courseData.data"
+                       href="#/detail/{{course.cid}}">
+                        <img ng-src="{{course.pic}}" alt=""/>
+                        <h2>{{course.title}}</h2>
+                        <h3>讲师：{{course.tname}}</h3>
+                        <p>¥ {{course.price}}<b ng-click="jump('address')" class="icon ion-ios-location address"></b></p>
+
+                    </a>
+                </div>
+                <ion-infinite-scroll ng-if="hasMore" distance="10%" on-infinite="loadMore()">
+                </ion-infinite-scroll>
+                <p ng-hide='hasMore' class="text-center assertive">喵，到最后了</p>
+                <br/><br/>
+            </ion-content>
+        </ion-side-menu-content>
+        <ion-side-menu side="left" width="180">
+            <div class="list course_type_list">
+                <a class="item item-button-right" ng-repeat="type in courseTypeList"
+                        href="#/list/{{type.tpid}}">
+                    {{type.tpname}}
+                    <button class="button button-icon icon ion-arrow-right-b">
+                    </button>
+                </a>
+            </div>
+        </ion-side-menu>
+    </ion-side-menus>
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

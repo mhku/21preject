@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>i前端</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/mycss.css"/>
+</head>
+<body>
+<!-- header -->
+<div class="header_box"></div>
+
+<!--主体内容-->
+<section class="login_box container">
+    <h2 class="title2"><a href="">新用户注册</a><span>用户登录</span></h2>
+    <div class="clearfloat">
+        <div class="login">
+            <dl class="clearfloat">
+                <dt><span class="tips">用户名不能为空</span>用户名：</dt>
+                <dd>
+                    <input type="text" id="uname" placeholder="邮箱/手机号"/>
+                    <em class="icon_user"></em>
+                    <i class="icon_error"></i>
+                </dd>
+            </dl>
+            <dl>
+                <dt><span class="tips">密码不能为空</span>密码：</dt>
+                <dd>
+                    <input type="password" id="upwd" placeholder="密码"/>
+                    <em class="icon_pwd"></em>
+                    <i class="icon_error"></i>
+                </dd>
+            </dl>
+            <p class="clearfloat">
+                <label>
+                    <input type="checkbox"/>
+                    <span>自动登录</span>
+                </label>
+                <button type="button" id="login">立 即 登 录</button>
+            </p>
+
+        </div>
+        <em class="linebetween"></em>
+        <p class="qrcode">
+            <i></i>
+            <span>扫码登录</span>
+        </p>
+    </div>
+</section>
+
+<!--footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="f_1 clearfloat">
+            <ul>
+                <li>
+                    <h5>关于i前端</h5>
+                    <a href="">发展历程</a>
+                    <a href="">管理团队</a>
+                    <a href="">企业文化</a>
+                    <a href="">加入我们</a>
+                </li>
+                <li>
+                    <h5>新手帮助</h5>
+                    <a href="">学员账号</a>
+                    <a href="">选课流程</a>
+                    <a href="">网报流程</a>
+                    <a href="">上课地点</a>
+                </li>
+                <li>
+                    <h5>常见问题</h5>
+                    <a href="">如何注册</a>
+                    <a href="">如何搜课</a>
+                    <a href="">如何报名</a>
+                    <a href="">如何缴费</a>
+                </li>
+                <li>
+                    <h5>联系我们</h5>
+                    <a href="">校区电话</a>
+                    <a href="">意见建议</a>
+                    <a href="">联系邮箱</a>
+                </li>
+            </ul>
+            <dl>
+                <dt></dt>
+                <dd>客服热线<br/>4008-220-220 ( 9:00 - 24:00 )</dd>
+            </dl>
+        </div>
+        <div class="f_2">
+            Copyright © 2016 iqianduan.com, All Rights Reserved 版权所有<br/>
+            北京前端教育科技有限公司　京ICP备123456号-1 京公网安备110180201608号
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

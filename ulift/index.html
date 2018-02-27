@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/mycss.css"/>
+</head>
+<body>
+
+<section class="ind_1">
+    <div class="ind_navbar">
+        <div class="container">
+            <h1 class="ind_logo"><a href=""></a></h1>
+            <div class="ind_user" id="header_user">
+                <!-- 登录前-->
+                <a href="" id="loginModal">登录</a> | <a href="register.html">注册</a>
+                <!-- 登陆后-->
+                <!--<a href="user/user.html"><span class="icon_user"></span>韩小米</a> | <a href="" class="user_quit">退出</a>-->
+            </div>
+            <ul class="ind_nav">
+                <li class="current"><a href="index.html">首页</a></li>
+                <li><a href="">新房</a></li>
+                <li><a href="">二手房</a></li>
+                <li><a href="zf_list.html">租房</a></li>
+                <li><a href="news.html">楼讯</a></li>
+                <li><a href="jingjiren.html">经纪人</a></li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="ind_1_title"></h2>
+    <div class="ind_search">
+        <ul class="ind_search_tab clearfloat">
+            <li class="current"><span>找出租</span></li>
+            <li><span>找二手房</span></li>
+            <li><span>找新房</span></li>
+        </ul>
+        <div class="ind_search_form">
+            <input type="text"/><button type="button">开始找房</button>
+        </div>
+    </div>
+    <p class="ind_1_text">今日新增出租信息234条  二手房真实房源889套 在售新楼盘112个</p>
+</section>
+<section class="ind_2">
+    <div class="container">
+        <ul class="clearfloat">
+            <li>
+                <span></span>
+                <h2>找出租</h2>
+                <p>真实出租房源，优生活承诺真实房源所见即真</p>
+            </li>
+            <li>
+                <span></span>
+                <h2>地图找房</h2>
+                <p>为您精准定位，位置周边配套设施一览无余</p>
+            </li>
+            <li>
+                <span></span>
+                <h2>地铁找房</h2>
+                <p>房源紧邻地铁站，交通出行更方便说走就走</p>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="ind_3">
+    <div class="container">
+        <h2 class="ind_3_title"></h2>
+        <p>集二手、新房、租房功能于一体，每天发布海量新房源，让您随时随地任性找房！在线咨询让您放心，消息动态推送让您省心，服务承诺让您安心，数据百科锦囊让您感受贴心漫漫找房路，我们努力为您想更多！</p>
+        <dl>
+            <dt></dt>
+            <dd>
+                <button type="button">iPhone</button>
+                <button type="button">Android</button>
+            </dd>
+        </dl>
+    </div>
+</section>
+
+<!--footer-->
+<footer class="footer"></footer>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/main.js"></script>
+<script>
+    isLogin();
+    $(".footer").load("footer.html");
+</script>
+</body>
+</html>

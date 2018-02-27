@@ -1,0 +1,66 @@
+<div ng-include="'tpl/include/header_back.html'"></div>
+<ion-header-bar class="bar-subheader list_header" >
+    <div class="row" id="list_header">
+        <div class="col" ng-click="toggleArea()">区域<i class="icon ion-android-arrow-dropdown"></i></div>
+        <div class="col">租金<i class="icon ion-android-arrow-dropdown"></i></div>
+        <div class="col">面积<i class="icon ion-android-arrow-dropdown"></i></div>
+        <div class="col">上新<i class="icon ion-android-arrow-dropdown"></i></div>
+        <div class="col display_type">
+            <button class="button icon ion-android-apps" ng-show="showList" ng-click="changeShowType()"></button>
+            <button class="button icon ion-android-menu" ng-hide="showList" ng-click="changeShowType()"></button>
+        </div>
+    </div>
+</ion-header-bar>
+<!--区域-->
+<div class="area_box" ng-if="isShowArea">
+    <div class="row">
+        <div class="col list">
+            <a class="item">区域</a>
+        </div>
+        <div class="col list middle">
+            <a class="item" ng-click="showSubArea(0)">不限</a>
+            <a class="item" ng-click="showSubArea(area.areaId)" ng-repeat="area in areaData">{{area.areaName}}</a>
+        </div>
+        <div class="col list ">
+            <a class="item">不限</a>
+            <a class="item" ng-repeat="subArea in subAreaData"
+               ng-click="subAreaSelected(subArea.subAreaId)">{{subArea.subAreaName}}</a>
+        </div>
+    </div>
+</div>
+<div class="area_bg" ng-if="isShowArea" ng-click="hideArea()"></div>
+<ion-content class="has-header has-subheader has-footer content" on-scroll="hideArea()">
+
+    <!--显示列表-->
+    <div class="list list_box" ng-if="showList">
+        <a href="#/detail/{{house.zfId}}" class="item item-thumbnail-left"
+           ng-repeat="house in listData track by $index">
+            <img ng-src="{{house.picList[0].zfPic}}"/>
+            <h2>{{house.title}}</h2>
+            <h3>{{house.leaseWay}}，{{house.size}}平米</h3>
+            <p>{{house.community}} </p>
+            <p> <span>{{house.price}}元/月</span></p>
+            <b>{{house.pay}}</b><i>{{house.decoration}}</i>
+        </a>
+    </div>
+    <div class="list list_box" ng-hide="showList">
+        <div class="row" ng-repeat="houseList in houseArray track by $index">
+            <a class="col" ng-repeat="house in houseList track by $index"
+               href="#/detail/{{house.zfId}}">
+                <img ng-src="{{house.picList[0].zfPic}}"/>
+                <h2>{{house.title}}</h2>
+                <h3>{{house.leaseWay}}，{{house.size}}平米</h3>
+                <p>{{house.community}}</p>
+                <p><span>{{house.price}}元/月</span></p>
+                <b>{{house.pay}}</b><i>{{house.decoration}}</i>
+            </a>
+        </div>
+    </div>
+
+    <ion-infinite-scroll ng-if="hasMore" distance="10%" on-infinite="loadMore()">
+    </ion-infinite-scroll>
+    <br/><br/>
+
+</ion-content>
+<span id="list_pager">{{pagerInfo}}</span>
+<div ng-include="'tpl/include/footer_all.html'"></div>

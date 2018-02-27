@@ -1,0 +1,22 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="m_header">
+        <div class="row">
+                <div class="col-10">
+                        <button ng-hide="isHome" class="button button-icon icon ion-ios-arrow-back" ng-click="backWard()"></button>
+                </div>
+                <div class="col-75">
+                        <label class="item item-input">
+                                <i class="icon ion-search placeholder-icon"></i>
+                                <input type="text" placeholder="Search" ng-model="inputTxt.kw">
+                        </label>
+                </div>
+                <div class="col-15"><button class="button" ng-click="search()">搜索</button></div>
+        </div>
+</ion-header-bar>
+<ion-content class="has-footer has-header content" id="search_box">
+        <div class="search_box">
+                <ul class="list  list-inset">
+                        <li class="item" ng-repeat="p in searchList">{{p.title1}}</li>
+                </ul>
+        </div>
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

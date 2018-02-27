@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/ulift.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/m_city.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/area_list.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/area_list_sub.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/favorite_addOrDelete.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/favorite_addOrDelete.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/favorite_select.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/favorite_zf.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/init.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/jingjiren_details.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/jingjiren_dianpu.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/jingjiren_list.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/news_details.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/news_list.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/order.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/user_changepwd.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/user_check_phone.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/user_login.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/user_oldpwd_check.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/user_personal.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/user_register.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/zf_details.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/php/zf_list.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/advertise.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/cart.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/detail.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/include/header_all.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/include/header_back.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/include/header_detail.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/list.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/login.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/news.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/register.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/search.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/start.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tpl/user.html" charset="UTF-8" />
+  </component>
+</project>

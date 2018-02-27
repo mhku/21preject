@@ -1,0 +1,58 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">楼市快讯</h1>
+</ion-header-bar>
+<ion-content class="has-header has-subheader has-footer content" on-scroll="hideArea()">
+    <!--区域-->
+    <div class="area_box" ng-if="isShowArea">
+        <div class="row">
+            <div class="col list">
+                <a class="item">区域</a>
+            </div>
+            <div class="col list middle">
+                <a class="item">不限</a>
+                <a class="item">海淀</a>
+                <a class="item">朝阳</a>
+                <a class="item">丰台</a>
+                <a class="item">东城</a>
+                <a class="item">西城</a>
+                <a class="item">石景山</a>
+                <a class="item">昌平</a>
+                <a class="item">燕郊</a>
+                <a class="item">房山</a>
+            </div>
+            <div class="col list ">
+                <a class="item">不限</a>
+            </div>
+        </div>
+    </div>
+    <div class="area_bg" ng-if="isShowArea" ng-click="hideArea()"></div>
+    <!--显示列表-->
+    <div class="list list_box" ng-if="showList">
+        <a href="#/detail/{{product.pid}}" class="item item-thumbnail-left" ng-repeat="product in productData track by $index">
+            <img src="img-house/01-01.jpg"/>
+            <h2>{{product.title1}}</h2>
+            <h3>{{product.title2}}</h3>
+            <p>中海大悦城 <span>9000元/月</span></p>
+            <b>随时看房</b><i>精装修</i>
+        </a>
+    </div>
+    <div class="list list_box" ng-hide="showList">
+        <div class="row" ng-repeat="products in productArray track by $index">
+            <a class="col" ng-repeat="product in products track by $index" href="#/detail/{{product.pid}}">
+                <img src="img-house/01-01.jpg"/>
+                <h2>{{product.title1}}</h2>
+                <h3>{{product.title1}}</h3>
+                <p>中海大悦城 <span>9000元/月</span></p>
+                <b>随时看房</b><i>精装修</i>
+            </a>
+        </div>
+    </div>
+
+    <ion-infinite-scroll ng-if="hasMore" distance="10%" on-infinite="loadMore()">
+    </ion-infinite-scroll>
+    <br/><br/>
+
+</ion-content>
+<span id="list_pager">{{pagerInfo}}</span>
+<div ng-include="'tpl/include/footer_all.html'"></div>

@@ -1,0 +1,27 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+        <div class="row search_box">
+                <!--类型-->
+                <div class="col-20">
+                        <select>
+                                <option selected>二手房</option>
+                                <option>租房</option>
+                                <option>新房</option>
+                        </select>
+                </div>
+                <div class="col-70">
+                        <label class="item item-input">
+                                <i class="icon ion-search placeholder-icon"></i>
+                                <input type="text" placeholder="Search" ng-model="inputTxt.kw">
+                        </label>
+                </div>
+                <div class="col-10"><a class="button" ng-click="search()">取消</a></div>
+        </div>
+</ion-header-bar>
+<ion-content class="has-footer has-header content" id="search_box">
+        <div class="search_box">
+                <ul class="list  list-inset">
+                        <li class="item" ng-repeat="p in searchList">{{p.title1}}</li>
+                </ul>
+        </div>
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

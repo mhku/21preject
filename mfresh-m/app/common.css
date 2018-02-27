@@ -1,0 +1,26 @@
+body {
+    margin:0;
+    background: #fff;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    line-height: 24px;
+    color:#333;
+}
+ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,button {
+    margin:0;
+    padding:0;
+}
+ul,ol {
+    list-style: none;
+}
+input,button {
+    font-family: "Microsoft YaHei";
+}
+a {
+    color:#333;
+    text-decoration: none;
+}
+a:hover {
+    color:#f60;
+    text-decoration: none;
+}

@@ -1,0 +1,69 @@
+<div ng-include="'tpl/include/header_user.html'"></div>
+<ion-content class="has-header has-footer content" id="user_box">
+        <h1>
+                <img src="images/logo.png" alt=""/>
+                <p>mary_2010</p>
+        </h1>
+        <div class="row user_summary">
+                <div class="col"><h4>{{cartCount}}</h4>我的关注</div>
+                <div class="col"><h4>{{orderCount}}</h4>全部订单</div>
+                <div class="col"><h4>{{favoriteCount}}</h4>产品收藏</div>
+        </div>
+
+        <div class="list">
+                <div class="item item-divider">
+                        我的关注
+                </div>
+                <div class="row item" ng-repeat="cart in cartData track by $index">
+                        <div class="col col-40"><a href="#/detail/{{cart.pid}}"><img ng-src="{{cart.pic}}" alt=""/></a></div>
+                        <div class="col col-40">
+                                <p>{{cart.title2}}</p>
+                                <p>{{cart.title1}}</p>
+                        </div>
+                        <div class="col">
+                                <span><em>{{cart.price | number:2}}</em></span>
+                        </div>
+                </div>
+        </div>
+
+        <div class="list">
+                <div class="item item-divider">
+                        产品收藏
+                </div>
+                <div class="row item" ng-repeat="fav in favoriteData track by $index">
+                        <div class="col" ng-repeat="data in fav track by $index">
+                                <a href="#/detail/{{data.pid}}"><img ng-src="{{data.pic}}" alt=""/></a>
+                                <p>{{data.title2}}</p>
+                                <p><span><em>{{data.price | number:2}}</em></span></p>
+                        </div>
+                </div>
+        </div>
+
+        <div class="list">
+                <div class="item item-divider">
+                        全部订单
+                </div>
+                <div class="item order_list" ng-repeat="order in orderData track by $index">
+                        <div class="row order_header">
+                                订单时间：{{order.createTime|date:'yyyy-MM-dd'}}</div>
+                        <div class="row" ng-repeat="detail in order.details track by $index">
+                                <div class="col col-40">
+                                        <img ng-src="{{detail.pic}}" alt=""/>
+                                </div>
+                                <div class="col col-40">{{detail.title1}}</div>
+                                <div class="col col-20">
+                                        {{detail.price}}
+                                        <br>
+                                        X{{detail.count}}
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col order_price">
+                                        <span>总价：{{order.price}}</span>
+                                </div>
+                        </div>
+                </div>
+
+        </div>
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

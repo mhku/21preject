@@ -1,0 +1,54 @@
+<div ng-include="'tpl/include/header_all.html'"></div>
+<ion-content class="has-header has-footer content">
+        <!--使用ng的slide-box设置轮播-->
+        <ion-slide-box  auto-play="true" does-continue="true" slide-interval="30000"
+                        show-pager="true" pager-click="pageClick(index)">
+                <ion-slide class="item image_box" ng-class="index==0?'active':''" ng-repeat="img in imgList">
+                        <img ng-src="{{img}}" alt=""/>
+                </ion-slide>
+        </ion-slide-box>
+
+        <!--主页内容:最新课程-->
+        <div class="list new_course_list">
+                <div class="item item-divider item_header">
+                        <a class="button button-small button-icon icon ion-star ion-left index-title item_title">最新课程</a>
+                </div>
+                <a class="item item-thumbnail-left"  ng-repeat="course in newCourseList" href="#/list/0">
+                        <img ng-src="{{course.pic}}" alt=""/>
+                        <h2>{{course.title}}</h2>
+                        <h3>讲师：{{course.tname}}</h3>
+                        <p>¥ {{course.price}}</p>
+                </a>
+        </div>
+
+        <!--主页内容:热门课程-->
+        <div class="list host_course_list">
+                <div class="item item-divider item_header">
+                        <a class="button button-small button-icon icon ion-star ion-left index-title item_title">热门课程</a>
+                </div>
+                <a class="item item-thumbnail-left"  ng-repeat="course in hotCourseList" href="#/list/0">
+                        <img ng-src="{{course.pic}}" alt=""/>
+                        <h2>{{course.title}}</h2>
+                        <h3>讲师：{{course.tname}}</h3>
+                        <p>¥ {{course.price}}</p>
+                </a>
+        </div>
+
+        <!--主页内容:名师堂-->
+        <div class="card index">
+                <div class="item item-divider item_header">
+                        <a class="button button-small button-icon icon ion-star ion-left index-title item_title">名师堂</a>
+                </div>
+                <div class="item item-text-wrap teacher_box">
+                        <div class="row" ng-repeat="teachers in teacherList">
+                                <div class="col" ng-repeat="teacher in teachers">
+                                        <a ng-hide="teacher.tname==undefined" href=""><img ng-src="{{teacher.tpic}}" alt=""/></a>
+                                        <p ng-hide="teacher.tname==undefined">讲师：{{teacher.tname}}</p>
+                                        <span ng-hide="teacher.tname==undefined">{{teacher.maincourse}}</span>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <br/><br/>
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

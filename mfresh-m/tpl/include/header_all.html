@@ -1,0 +1,15 @@
+<ion-header-bar class="bar-stable" align-title="center" id="m_header">
+    <div class="row">
+        <div class="col-10">
+            <button ng-hide="isHome" class="button button-icon icon ion-ios-arrow-back" ng-click="backWard()"></button>
+            <button ng-show="isHome" class="button button-icon icon ion-ios-email-outline" ng-click="backWard()"></button>
+        </div>
+        <div class="col-80">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-click="jump('search')">
+            </label>
+        </div>
+        <div class="col-10"><button class="button button-icon icon ion-ios-gear-outline" ng-click="settings()"></button></div>
+    </div>
+</ion-header-bar>

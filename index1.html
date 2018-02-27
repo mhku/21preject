@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function foo(n,o){
+        console.log(o);
+        return {
+            foo:function (m) {
+                return foo(m,n);
+            }
+        }
+    }
+    var a=foo(0);a.foo(1);a.foo(2);a.foo(3);
+    var b=foo(0).foo(1).foo(2).foo(3);
+    var c=foo(0).foo(1);c.foo(2);c.foo(3);
+
+    function Foo() {
+        getName=function(){
+            alert(1)
+        }
+        return this;
+    }
+    Foo.getName=function(){
+        alert(2);
+    }
+    Foo.prototype.getName=function(){
+        alert(3);
+    }
+    var getName=function(){
+        alert(4);
+    }
+    function getName(){
+        alert(5);
+    }
+    Foo.getName();//2
+    getName();//4
+    new Foo.getName();//2
+    new Foo().getName();//3
+    new new Foo().getName();//3
+</script>
+</body>
+</html>

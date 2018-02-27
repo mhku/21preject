@@ -1,0 +1,23 @@
+<ion-content ng-controller="loginCtrl" class="login_box">
+        <section class="card">
+                <div class="item item-divider">
+                        <button class="icon ion-close-circled" ng-click="backWard()"></button>
+                        <a href="#/register">注册</a>
+                        <span>用户登录</span>
+                </div>
+                <div class="item">
+                        <label class="item item-input">
+                                <span class="input-label">用户名</span>
+                                <input type="text" ng-model="phone">
+                        </label>
+                        <label class="item item-input">
+                                <span class="input-label">密码</span>
+                                <input type="password" ng-model="pwd">
+                        </label>
+                        <div class="user_login">
+                                <button ng-click="login()">登录</button>
+                                <p>{{error}}</p>
+                        </div>
+                </div>
+        </section>
+</ion-content>

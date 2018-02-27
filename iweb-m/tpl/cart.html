@@ -1,0 +1,43 @@
+
+<div ng-include="'tpl/include/header_all.html'"></div>
+
+<ion-content class="has-header has-footer content cart_box">
+        <h2 ng-show="cartData.length==0">购物车中没有任何课程！</h2>
+        <div class="row" ng-repeat="cart in cartData">
+                <div class="col col-10">
+                        <label class="checkbox">
+                                <input ng-checked="selectAll" type="checkbox" ng-click="operateCart($index,$event)">
+                        </label>
+                </div>
+                <div class="col col-40">
+                        <a href="#/detail/{{cart.courseid}}"><img ng-src="{{cart.pic}}" alt=""/></a>
+                </div>
+                <div class="col col-40">
+                        <p>{{cart.title}}</p>
+                        <span>价格：<em>{{cart.price * cart.courseCount | number:2}}</em></span>
+                        <br/>
+                        <button ng-click="decreaseCount($index)">-</button><input type="text" value="{{cart.courseCount}}"/><button ng-click="increaseCount($index)">+</button>
+                </div>
+                <div class="col col-10">
+                        <a class="button button-icon ion-ios-close-outline cart_delete" ng-click="deleteCart(cart.ctid,$index)"></a>
+                </div>
+        </div>
+</ion-content>
+
+<div class="bar bar-subfooter bar-light cart_footer">
+        <div class="row">
+                <div class="col col-40">
+                        <label class="checkbox">
+                                <input type="checkbox" class="checkbox_all"
+                                       ng-model="selectAll" ng-click="selectAllOperate($event)"/>
+                        </label>
+                        <b>全选</b>
+                </div>
+                <div class="col col-40"><span>总金额：<strong>{{sum|number:2}}</strong></span></div>
+                <div class="col col-20"><button type="button" ng-click="createOrder()">结算</button></div>
+        </div>
+        <div class="iweb_popover order_success" ng-show="addSuccess">
+                <h3 class="popover-title">亲，订单已经成功生成了。</h3>
+        </div>
+</div>
+<div ng-include="'tpl/include/footer_all.html'"></div>

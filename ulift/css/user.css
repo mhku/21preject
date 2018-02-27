@@ -1,0 +1,192 @@
+.user {
+    margin-bottom: 50px;
+}
+.user_side {
+    float: left;
+    width: 200px;
+    min-height: 420px;
+    background: #f5f5f5;
+}
+.user_side ul li {
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+}
+.user_side ul li:hover {
+    background: #eee;
+    cursor: pointer;
+}
+.user_side ul li.active {
+    background: #39ac6a;
+    color: #fff;
+}
+
+.user_main {
+    float: right;
+    width: 720px;
+}
+.user_info {
+    margin-bottom: 60px;
+}
+.user_info>img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 30px;
+}
+.user_info>h2 {
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 30px;
+}
+.user_info>p {
+    font-size: 14px;
+    margin-top:20px;
+}
+.user_info>p>span {
+    color: #999;
+    padding-right: 18px;
+}
+.user_info>p>a {
+    color: #f60;
+    text-decoration: underline;
+}
+/*关注*/
+.favorite>h3 {
+    color: #666;
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+.favorite>h3>span {
+    color: #e4393c;
+}
+.favorite_list>li {
+    float: left;
+    margin-right: 60px;
+    width: 200px;
+    line-height: 22px;
+    margin-top: 20px;
+}
+.favorite_list>li:nth-child(3n){
+    margin-right: 0;
+}
+.favorite_list>li>a {
+    display: block;
+}
+.favorite_list>li>a>img {
+    display: block;
+    width: 200px;
+    height: 150px;
+}
+.favorite_list>li>h2 {
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: lighter;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.favorite_list>li>h2>a {
+    color: #4285f4;
+}
+.favorite_list>li>p {
+    color: #666;
+}
+.favorite_list>li>p>span {
+    color: #888;
+    padding-right:10px;
+}
+.favorite_list>li>span {
+    display: block;
+    color: #e4393c;
+    margin-top: 2px;
+}
+.favorite_list>li>span>strong {
+    font-size: 20px;
+}
+
+/*个人资料*/
+.userform {
+    margin: 60px auto;
+}
+.userform ul li {
+    margin-bottom: 16px;
+    line-height: 38px;
+    height: 38px;
+    position: relative;
+}
+.userform ul li span,.userform ul li p {
+    float: left;
+}
+.userform>ul>li>span {
+    margin-left:120px;
+    width: 110px;
+    text-align: right;
+    font-size: 16px;
+    color:#666;
+}
+.userform>ul>li>p {
+    width: 320px;
+    height: 38px;
+    margin-left: 10px;
+}
+.userform>ul>li>p input[type="text"] {
+    width: 320px;
+    height: 38px;
+    box-sizing: border-box;
+    border:1px solid #ccc;
+    padding: 0 10px;
+}
+.userform>ul>li>p input[type="password"] {
+    width: 320px;
+    height: 38px;
+    box-sizing: border-box;
+    border:1px solid #ccc;
+    padding: 0 10px;
+}
+
+.userform .li_btn {
+    margin-top: 40px;
+}
+.userform .li_btn button {
+    outline: none;
+    margin-left: 240px;
+    width: 320px;
+    height:38px;
+    border:0;
+    background: #72b134;
+    color:#fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+.userform .li_btn button:hover {
+    background: #65a428;
+}
+.userform ul li i {
+    display: none;
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    top:4px;
+    left:570px;
+    background: #e26058;
+    border-radius: 3px;
+    color: #fff;
+    white-space: nowrap;
+    padding: 0 12px;
+    font-style: normal;
+    font-size: 15px;
+}
+.userform ul li i:before{
+    content: "";
+    position: absolute;
+    top:11px;
+    left:-8px;
+    border:4px solid transparent;
+    border-right-color:#e26058;
+
+}
+
+
+

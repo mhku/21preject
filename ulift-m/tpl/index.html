@@ -1,0 +1,138 @@
+<div ng-include="'tpl/include/header_all.html'" ng-show="showHeader"></div>
+<ion-content class="has-footer content" ng-class="showHeader?'has-header':''"  on-scroll="getScrollPosition()">
+        <div id="index_box">
+                <!--定位和搜索-->
+                <section>
+                        <span ng-click="showCity()">北京<i class="icon ion-android-arrow-dropdown"></i></span>
+                        <button class="icon ion-android-search"  ng-click="jump('search')"></button>
+                </section>
+
+                <!--功能tab-->
+                <div class="row func_tab">
+                        <div class="col">
+                                <a class="{{tabIndex==0?'active':''}}" ng-click="tabChanged(0)">我要买房</a>
+                        </div>
+                        <div class="col">
+                                <a class="{{tabIndex==1?'active':''}}" ng-click="tabChanged(1)">我要租房</a>
+                        </div>
+                        <div class="col">
+                                <a class="{{tabIndex==2?'active':''}}" ng-click="tabChanged(2)">我是房主</a>
+                        </div>
+                </div>
+                <!--主要功能图标区域-->
+                <div class="func_box">
+                        <!--买房功能区-->
+                        <div class="row" ng-if="tabIndex==0">
+                                <div class="col">
+                                        <i class="icon ion-android-image new_house"></i>
+                                        <p>新房</p>
+                                </div>
+                                <div class="col">
+                                        <i class="icon ion-home old_house"></i>
+                                        <p>二手房</p>
+                                </div>
+                                <div class="col">
+                                        <i class="icon ion-android-boat f_house"></i>
+                                        <p>海外房产</p>
+                                </div>
+                                <div class="col">
+                                        <i class="icon ion-android-pin map_house"></i>
+                                        <p>地图找房</p>
+                                </div>
+                        </div>
+                        <!--租房功能区-->
+                        <div class="row" ng-if="tabIndex==1">
+                                <a class="col" href="#/list/0">
+                                        <i class="icon ion-android-playstore normal_rent"></i>
+                                        <p>普通租房</p>
+                                </a>
+                                <a class="col" href="#/list/1">
+                                        <i class="icon ion-android-navigate map_rent"></i>
+                                        <p>地图租房</p>
+                                </a>
+                                <a class="col" href="#/list/2">
+                                        <i class="icon ion-android-train train_rent"></i>
+                                        <p>地铁租房</p>
+                                </a>
+                        </div>
+                        <!--房主功能区-->
+                        <div class="row"  ng-if="tabIndex==2">
+                                <div class="col">
+                                        <i class="icon ion-android-bookmark owner_sell"></i>
+                                        <p>我要卖房</p>
+                                </div>
+                                <div class="col">
+                                        <i class="icon ion-calculator owner_rent"></i>
+                                        <p>我要租房</p>
+                                </div>
+                                <div class="col">
+                                        <i class="icon ion-ribbon-b owner_sales"></i>
+                                        <p>找经纪人</p>
+                                </div>
+                        </div>
+                        <!--其他信息区-->
+                        <div class="row other_box">
+                                <div class="col">
+                                        <h2>10万+</h2>
+                                        <p>有效真实房源</p>
+                                </div>
+                                <div class="col">
+                                        <h2>1万+</h2>
+                                        <p>全国经纪人</p>
+                                </div>
+                                <div class="col">
+                                        <h2>时时+</h2>
+                                        <p>信息实时推送</p>
+                                </div>
+                        </div>
+                </div>
+
+                <!--常用工具-->
+                <div class="tools">
+                        <h2>常用工具</h2>
+                        <div class="row">
+                                <div class="col">
+                                        <i class="icon ion-ios-book"></i>
+                                        <p>百科</p>
+                                </div>
+                                <div class="col">
+                                        <i class="icon ion-android-calendar"></i>
+                                        <p>小区</p>
+                                </div>
+                                <div class="col">
+                                        <i class="icon ion-ribbon-b"></i>
+                                        <p>经纪人</p>
+                                </div>
+                                <div class="col">
+                                        <i class="icon ion-android-cloud-circle"></i>
+                                        <p>门店</p>
+                                </div>
+                                <div class="col">
+                                        <i class="icon ion-calculator"></i>
+                                        <p>计算器</p>
+                                </div>
+                        </div>
+                </div>
+
+                <!--信息推送-->
+                <div class="news_box">
+                        <h2>房产资讯</h2>
+                        <div class="list">
+                                <a class="item item-thumbnail-left" ng-repeat="news in newsList">
+                                        <img ng-src="{{news.pic}}">
+                                        <h3>{{news.title}}</h3>
+                                        <p>{{news.abstract}}</p>
+                                        <span>{{news.pubTime | date:'yyyy-MM-dd'}}</span>
+                                </a>
+                        </div>
+                </div>
+
+
+
+                <ion-infinite-scroll ng-if="hasMore" distance="10%" on-infinite="loadMore()">
+                </ion-infinite-scroll>
+                <p ng-hide='hasMore' class="more_message">没有更多数据可以加载了</p>
+                <br/><br/>
+        </div>
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

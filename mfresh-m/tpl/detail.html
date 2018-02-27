@@ -1,0 +1,50 @@
+<div ng-include="'tpl/include/header_all.html'"></div>
+<ion-content class="has-footer has-header detail_box">
+    <div class="pdinfo_title">
+        <div class="row">
+            <div class="col"><img ng-src="{{product.pic}}" alt=""/></div>
+        </div>
+        <div class="row">
+            <div class="col"><h2>{{product.title1}}</h2></div>
+        </div>
+        <div class="row">
+            <div class="col-30">
+                <p>价格：<span>¥</span><strong>{{product.price}}</strong></p>
+            </div>
+            <div class="col-70">
+                <a class="icon ion-android-cart m_cart" ng-click="addCart()"></a>
+                <a ng-click="addFavorite()" class="icon m_cart"
+                   ng-class="isFavorite?'ion-ios-heart':'ion-ios-heart-outline'"></a>
+            </div>
+            <div class="m_popover"  ng-show="addSuccess">
+                <h3 class="popover-title">加入成功</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="pdinfo_text">
+        <div class="row">
+            <div class="col">型号：{{product.model}}</div>
+            <div class="col">功能：{{product.func}}</div>
+        </div>
+        <div class="row">
+            <div class="col">噪音：{{product.noise}}</div>
+            <div class="col">风量：{{product.wind}}</div>
+        </div>
+        <div class="row">
+            <div class="col">适用对象：{{product.applyTo}}</div>
+            <div class="col">适用面积：{{product.size}}</div>
+        </div>
+        <div class="row">
+            <div class="col">空气净化能效等级：{{product.level}}</div>
+        </div>
+    </div>
+    <div class="list">
+        <div class="item item-divider">
+            <h2 class="title">产品详情</h2>
+        </div>
+        <div class="pdinfo_detail" ng-bind-html="product.detail" >
+        </div>
+    </div>
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

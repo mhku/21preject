@@ -1,0 +1,75 @@
+<ion-content class="has-footer content list_data_box">
+    <ion-side-menus  enable-menu-with-back-views="true">
+        <ion-side-menu-content drag-content="true">
+            <ion-header-bar class="bar-stable list_menu_icon" align-title="center" id="m_header">
+                <div class="row">
+                    <div class="col-10">
+                        <button ng-hide="isHome" class="button button-icon icon ion-ios-arrow-back" ng-click="backWard()"></button>
+                    </div>
+                    <div class="col-80">
+                        <label class="item item-input">
+                            <i class="icon ion-search placeholder-icon"></i>
+                            <input type="text" placeholder="Search"  ng-click="jump('search')">
+                        </label>
+                    </div>
+                    <div class="col-10"><a menu-toggle="left" class="button icon ion-navicon"></a></button></div>
+                </div>
+            </ion-header-bar>
+            <ion-header-bar class="bar-subheader bar-stable">
+                <div class="row" id="list_header">
+                    <div class="col">综合</div>
+                    <div class="col">销量</div>
+                    <div class="col">上新</div>
+                    <div class="col">价格</div>
+                    <div class="col display_type">
+                        <button class="button icon ion-android-apps" ng-show="showList" ng-click="changeShowType()"></button>
+                        <button class="button icon ion-android-menu" ng-hide="showList" ng-click="changeShowType()"></button>
+                    </div>
+                </div>
+            </ion-header-bar>
+            <ion-content class="has-header has-subheader content list_box">
+                <div class="list product_list" ng-if="showList">
+                    <a href="#/detail/{{product.pid}}" class="item item-thumbnail-left" ng-repeat="product in productData track by $index">
+                        <img ng-src="{{product.pic}}"/>
+                        <h2>{{product.title1}}</h2>
+                        <p>{{product.title2}}</p>
+                    </a>
+                </div>
+                <div class="list product_list" ng-hide="showList">
+                    <div class="row" ng-repeat="products in productArray track by $index">
+                        <a class="col" ng-repeat="product in products track by $index" href="#/detail/{{product.pid}}">
+                            <img ng-src="{{product.pic}}"/>
+                            <h2>{{product.title1}}</h2>
+                            <p>{{product.price}}</p>
+                        </a>
+                    </div>
+                </div>
+
+                <ion-infinite-scroll ng-if="hasMore" distance="10%" on-infinite="loadMore()">
+                </ion-infinite-scroll>
+                <br/><br/>
+            </ion-content>
+            <span id="list_pager">{{pagerInfo}}</span>
+        </ion-side-menu-content>
+        <ion-side-menu side="left" width="120">
+            <div class="list product_type_box">
+                <a class="item item-button-right" href="#/list/0">
+                    全部
+                    <button class="button button-icon icon ion-arrow-right-b">
+                    </button>
+                </a>
+                <a class="item item-button-right" href="#/list/1">
+                    净化器
+                    <button class="button button-icon icon ion-arrow-right-b">
+                    </button>
+                </a>
+                <a class="item item-button-right" href="#/list/2">
+                    滤网
+                    <button class="button button-icon icon ion-arrow-right-b">
+                    </button>
+                </a>
+            </div>
+        </ion-side-menu>
+    </ion-side-menus>
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

@@ -1,0 +1,580 @@
+body{
+    font:12px 'microsoft yahei';
+    color:#666;
+}
+
+/*header 和 footer*/
+.bar-stable .title img{
+    vertical-align: middle;
+}
+#m_header.bar{
+    background-color: #e5e5e5;
+}
+#m_header .row{
+    padding:0px;
+}
+#m_header .row>div{
+    text-align: center;
+}
+#m_header .row .item-input{
+    padding:4px 0px 4px 16px;
+}
+#m_header h1{
+    width:70%;
+    left:15%;
+}
+#m_header label{
+    margin:0px auto;
+    width:100%;
+    background-color: #fff;
+    border-radius:2px;
+}
+#m_header label input{
+    height:20px;
+}
+#m_footer .tabs{
+    background-color: #002c69;
+    color:#fff;
+}
+/*轮播图*/
+#index_box .slider-slides > .item{
+    border:1px solid #ccc;
+    background-color: #D9D9D9;
+    margin:0;
+    height: 150px;
+}
+#index_box .slider-slides > .item > img {
+    display: block;
+    height: 100%;
+    vertical-align: middle;
+    border:0;
+    transform:translateX(-20%);
+}
+#index_box .slider-slide{
+    padding:0px;
+}
+#index_box .slider-pager{
+    z-index:100;
+}
+#index_box .slider-pager .slider-pager-page{
+    color:orangered;
+}
+
+/*主页内容*/
+#index_box .img_box{
+    margin:0;
+    padding:0;
+}
+#index_box .row > .col img{
+    max-width: 100%;
+    display: block;
+    margin: 0px auto;
+    border-radius: 6px;
+    transition:all linear 1s;
+}
+#index_box .row > .col img:hover{
+    transform:scale(1.1);
+}
+
+#index_box .index_about{
+    text-indent: 20px;
+    line-height:25px;
+}
+#index_box .index_about>a{
+    color:#0066cc;
+    text-decoration: underline;
+    float:right;
+}
+#index_box .card{
+    margin:0px;
+}
+
+/*起始页*/
+.start_box{
+    width:100%;
+    height:100%;
+}
+.start_box span{
+    font-size:12pt;
+    color:#f00;
+    font-weight:bold;
+    margin-right:5px;
+ }
+.start_box>button{
+    float:right;
+    margin:5px;
+}
+.m_logo{
+    position: absolute;
+    margin: 0;
+    line-height: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    top: 20%;
+    margin-top: -2.5rem;
+    animation:textChange 3s alternate infinite linear;
+}
+@keyframes textChange {
+    from{
+        color:#f39700;
+    }
+    to{
+        color:#002c69;
+    }
+}
+.m_img-full-width {
+    max-width: 100%;
+    position: absolute;
+    top: 20%;
+    margin-top: 30%;
+    animation:imageRotate 3s alternate infinite linear;
+}
+@keyframes imageRotate {
+    from{
+        transform:rotate(0deg) scale(1.02);
+        opacity: 0.7;
+    }
+    25%{
+        transform:rotate(-2deg) scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform:rotate(0deg) scale(1.02);
+        opacity: 0.7;
+    }
+    75%{
+        transform:rotate(2deg) scale(1);
+        opacity: 1;
+    }
+    to{
+        transform:rotate(0deg) scale(1.02);
+        opacity: 0.7;
+    }
+}
+
+/*列表界面的样式*/
+.list_data_box .scroll{
+    height:100%;
+}
+.list_box{
+    background-color: #f5f5f5;
+}
+.list_menu_icon .button{
+    border: 0;
+    background-color: transparent;
+}
+#list_header .col .button{
+    border:0;
+    position:static;
+}
+.col.display_type{
+    padding:0;
+}
+.product_list{
+    margin-top:5px;
+}
+.list_box .product_list .row img{
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow:5px 5px 3px #eee;
+}
+.list_box .product_list .row h2{
+    font-size:12px;
+    color:#666;
+    margin:5px auto;
+}
+.list_box .product_list .row p{
+    font-size:12px;
+    color:#ffa81a;
+    font-weight: bold;
+    text-align: center;
+}
+.product_type_box .item.item-button-right{
+    padding-right:20px;
+}
+.product_type_box .item.item-button-right button{
+    color:#002c69;
+}
+#list_pager{
+    position:fixed;
+    bottom:5%;
+    right:5%;
+    color:#666;
+    background-color: #f5f5f5;
+    font-size:12pt;
+    border:1px solid #aaa;
+    border-radius:4px;
+    padding:5px;
+    z-index:100;
+}
+
+/*详细界面的样式*/
+.detail_box .pdinfo_title{
+    text-align: center;
+}
+.detail_box .pdinfo_title img{
+    max-width: 90%;
+}
+.detail_box .pdinfo_title h2{
+    text-align: left;
+    font:16px 'microsoft yahei';
+    color:#666;
+    font-weight:bold;
+}
+.detail_box .pdinfo_title p{
+    text-align:left;
+}
+.detail_box .pdinfo_title p strong{
+    color: #f00;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.detail_box .pdinfo_title .m_cart{
+    color: #f39700;
+    font-size:20px;
+    margin:0px 5px;
+    cursor: pointer;
+}
+.detail_box .pdinfo_text {
+    width:90%;
+    margin: 5px auto;
+    width: 400px;
+}
+.detail_box .pdinfo_detail{
+    padding:5px;
+    font-size:12px;
+
+}
+.detail_box .pdinfo_detail img{
+    max-width: 95%;
+}
+.detail_box .pdinfo_title .row{
+    position: relative;
+}
+.m_popover {
+    position: absolute;
+    bottom:15%;
+    right:15%;
+    z-index: 1060;
+    max-width: 276px;
+    padding: 1px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+    white-space: normal;
+    background-color: #f39700;
+    background-clip: padding-box;
+    border: 1px solid #f39700;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.m_popover .popover-title {
+    padding: 8px 14px;
+    margin: 0;
+    font-size: 14px;
+    background-color: #f39700;
+    border-radius: 5px 5px 0 0;
+    color:#fff;
+}
+
+/*登录*/
+.login_box{
+    background: url(../images/login_bg.jpg) 60% 0 no-repeat;
+}
+.login_box .card{
+    margin-top:20%;
+    background: rgba(223,226,233,0.95);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #7e858f;
+}
+.login_box .card .item{
+    background-color: transparent;
+}
+.login_box .card .item-divider{
+    font-weight: lighter;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: 1px solid #b5bdca;
+    font-size: 18px;
+    margin-bottom: 18px;
+    font-family: 'microsoft yahei';
+}
+.login_box .card .item-input{
+    padding-left:0px;
+}
+.login_box .card .item-input .input-label{
+    max-width:20%;
+}
+.login_box .card .item-input input{
+    border: 1px solid #b5bdca;
+    border-radius: 2px;
+}
+.user_login button{
+    outline: none;
+    display: block;
+    width: 100%;
+    height: 38px;
+    border-radius: 3px;
+    border: 0;
+    margin-top: 8px;
+    background: #7ab6f5;
+    color: #fff;
+    font-size: 18px;
+}
+
+/*购物车*/
+.cart_footer {
+    font-size: 14px;
+}
+.cart_footer .row .col{
+    padding:0px;
+    vertical-align: middle;
+    line-height: 32px;
+}
+.cart_footer input{
+    vertical-align: middle;
+}
+.cart_footer button{
+    width: 60px;
+    height: 32px;
+    background: #f63;
+    border:none;
+    color:#fff;
+    font-size: 18px;
+    border-radius: 4px;
+}
+.cart_footer span {
+    margin-right: 10px;
+    line-height: 32px;
+}
+.cart_footer span strong{
+    font-size: 16px;
+    color:#f63;
+}
+
+.cart_box .row{
+    border-bottom:1px solid #ddd;
+    padding:5px;
+    margin-bottom: 5px;
+}
+.cart_box .col{
+    text-align: left;
+    vertical-align: middle;
+}
+.cart_box h2{
+    line-height: 40px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+.cart_box>div img {
+    width: 95%;
+    overflow: hidden;
+}
+.cart_box>div p {
+    width: 340px;
+    font-size: 0.9rem;
+    text-align: left;
+    margin:5px auto;
+}
+.cart_box .cart_detail{
+    margin-top:15px;
+    text-align: right;
+}
+.cart_box>div span{
+    float:left;
+}
+.cart_box>div span>em {
+    text-align: center;
+    color:#f63;
+}
+.cart_box div div button,.cart_box div div input[type='text']{
+    height:24px;
+    line-height: 24px;
+    vertical-align: middle;
+    border:1px solid #ccc;
+    padding:0px 6px;
+    display: inline-block;
+    font-size: 12px;
+}
+.cart_box div div input[type='text']{
+    display: inline-block;
+    width:24px;
+    border-left:0;
+    border-right: 0;
+    text-align: center;
+}
+.cart_box .checkbox input,.cart_footer .checkbox input{
+    width:20px;
+    height:20px;
+}
+.cart_box .cart_delete{
+    color:#002c69;
+}
+.cart_footer b,.cart_footer label{
+    line-height:30px;
+    vertical-align: middle;
+    display: inline-block;
+    color:#666;
+}
+.cart_footer .order_success{
+    right:30%;
+    bottom:50%;
+    width:180px;
+    font-size:12px;
+    text-align: center;
+}
+
+/*个人中心*/
+#iweb_header_user{
+    border-width:0;
+    background-color: #7ab6f5;
+    color:#fff;
+}
+#user_box img{
+    max-width:90%;
+    border-radius: 4px;
+}
+#user_box h1{
+    background-color: #7ab6f5;
+    height:90px;
+    text-align: center;
+    box-shadow:0px 4px 2px #2d3d69;
+}
+#user_box h1 img{
+    border:1px solid #fff;
+    width:50px;
+    height:50px;
+    border-radius: 30px;
+}
+#user_box h1 p{
+    color:#fff;
+    text-align: center;
+    font-size:1.1rem;
+}
+#user_box .row{
+    text-align: center;
+}
+#user_box span em{
+    color:#f60;
+}
+#user_box .user_summary{
+    border-bottom: 6px solid #eee;
+}
+
+#user_box .list{
+    border-width:0px;
+    border-bottom:6px solid #eee;
+}
+#user_box .item-divider{
+    border-width:0px;
+    background-color: #fff;
+    border-bottom:1px solid #f5f5f5;
+}
+
+.order_list.item{
+    padding:0px;
+    font-size:0.8rem;
+}
+.order_list.item .row{
+    padding:10px;
+}
+#user_box .order_list.item .row img{
+    max-width: 80%;
+}
+.order_list.item .row.order_header{
+    background-color: #f5f5f5;
+    border:1px solid #eee;
+    height:40px;
+    line-height:40px;
+    padding:0px 10px;
+}
+#user_box .order_price{
+    text-align:right;
+    padding-right:30px;
+    color:#f60;
+}
+/*个人信息*/
+div.user_save{
+    padding:10px;
+}
+div.user_save>button.button-stable{
+    border-color:#ccc;
+    font:1.2rem 'microsoft yahei';
+}
+
+/*搜索设置框出现的动画*/
+.modal{
+    width:60%;
+    min-height:40%;
+    height:40%;
+    box-shadow:0px 6px 3px #666;
+}
+/*设置框本身的样式*/
+.settins_box{
+    background: rgba(100,100,100,0.95);
+    position: absolute;
+    width:100%;
+    height: 100%;
+    padding:10px;
+    box-shadow:-20px 12px 5px #666;
+    border-radius: 2px;
+}
+.settins_box .list{
+    margin-bottom:5px;
+}
+.settins_box .list .item{
+    padding:10px 50px 10px 10px;
+}
+.settins_box .list a.item:hover {
+    color: #002c69;
+}
+div.user_exit{
+    padding:5px;
+}
+div.user_exit>button.button-stable{
+    border-color:#7ab6f5;
+    font:1.2rem 'microsoft yahei';
+    background-color: #7ab6f5;
+    color:#fff;
+    margin:0px auto;
+}
+.slide-in-right{
+    left:40%;
+    transition: all ease-in-out 450ms;
+}
+
+/*要离开的元素动画结束时的样式*/
+.slide-in-right.ng-leave{
+    left:40%;
+}
+.slide-in-right.ng-leave.ng-leave-active {
+    left: 100%;
+}
+/*要进入的元素动画开始时的样式*/
+.slide-in-right.ng-enter {
+    left: 100%;
+}
+/*要进入的元素动画结束时的样式*/
+.slide-in-right.ng-enter.ng-enter-active {
+    left: 40%;
+}
+
+/*搜索页面*/
+#m_header .button{
+    background-color: transparent;
+    border:0;
+}
